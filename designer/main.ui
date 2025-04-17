@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1410</width>
+    <height>778</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>3840</width>
+    <height>3840</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Mes ++ Main</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icon.jpeg</normaloff>../icon.jpeg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonFollowStyle</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1411</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="page"/>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1410</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar{
+color: white;background:rgba(0,0,200,200);
+}
+
+QMenu:{background:rgba(50, 255, 50,125)}
+QMenu:hover{background:rgba(50, 255, 50,255)}</string>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuUtility">
+    <property name="title">
+     <string>Utility</string>
+    </property>
+    <addaction name="actionUser_Manager"/>
+    <addaction name="actionUserPermisions"/>
+    <addaction name="actionAppMasterSettings"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuCur_and_Crimp">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="tearOffEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Cut/Crimp</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+    <addaction name="actionCuttingList"/>
+    <addaction name="actionC_C_LABEL"/>
+   </widget>
+   <widget class="QMenu" name="menuAssembly">
+    <property name="styleSheet">
+     <string notr="true">border:1px black;</string>
+    </property>
+    <property name="title">
+     <string>Assembly</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuEOL_Packing">
+    <property name="styleSheet">
+     <string notr="true">border:1px black;</string>
+    </property>
+    <property name="title">
+     <string>EOL+Packing</string>
+    </property>
+    <addaction name="actionTestEquipment"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionTestModelMaster"/>
+    <addaction name="actionTestMaster"/>
+   </widget>
+   <widget class="QMenu" name="menuFinal">
+    <property name="styleSheet">
+     <string notr="true">border:1px black;</string>
+    </property>
+    <property name="title">
+     <string>Final</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPart_Number">
+    <property name="styleSheet">
+     <string notr="true">border:1px black;</string>
+    </property>
+    <property name="title">
+     <string>Part Number</string>
+    </property>
+    <addaction name="actionPartNumberMaster"/>
+    <addaction name="actionPartCategoryMaster"/>
+   </widget>
+   <widget class="QMenu" name="menuStock">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>Stock</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOrders">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>Orders</string>
+    </property>
+    <addaction name="actionOrders"/>
+   </widget>
+   <widget class="QMenu" name="menuMaintenance">
+    <property name="title">
+     <string>Maintenance</string>
+    </property>
+    <addaction name="actionMachine_Types"/>
+    <addaction name="actionMachine"/>
+    <addaction name="actionApplicatorCA"/>
+    <addaction name="actionSpare_part_Master"/>
+    <addaction name="actionApplicatorMaster"/>
+    <addaction name="separator"/>
+    <addaction name="actionValidateApplicator"/>
+   </widget>
+   <addaction name="menuUtility"/>
+   <addaction name="menuCur_and_Crimp"/>
+   <addaction name="menuAssembly"/>
+   <addaction name="menuEOL_Packing"/>
+   <addaction name="menuFinal"/>
+   <addaction name="menuPart_Number"/>
+   <addaction name="menuStock"/>
+   <addaction name="menuOrders"/>
+   <addaction name="menuMaintenance"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionUser_Manager">
+   <property name="text">
+    <string>User Manager</string>
+   </property>
+  </action>
+  <action name="actionMachine_Types">
+   <property name="text">
+    <string>MachineTypesMaster</string>
+   </property>
+  </action>
+  <action name="actionMachine">
+   <property name="text">
+    <string>MachineMaster</string>
+   </property>
+  </action>
+  <action name="actionApplicatorCA">
+   <property name="text">
+    <string>ApplicatorCA Type</string>
+   </property>
+  </action>
+  <action name="actionSpare_part_Master">
+   <property name="text">
+    <string>Spare part Master</string>
+   </property>
+  </action>
+  <action name="actionApplicatorMaster">
+   <property name="text">
+    <string>ApplicatorMaster</string>
+   </property>
+  </action>
+  <action name="actionValidateApplicator">
+   <property name="text">
+    <string>ValidateApplicator</string>
+   </property>
+  </action>
+  <action name="actionPartNumberMaster">
+   <property name="text">
+    <string>PartNumberMaster</string>
+   </property>
+  </action>
+  <action name="actionPartCategoryMaster">
+   <property name="text">
+    <string>PartCategoryMaster</string>
+   </property>
+  </action>
+  <action name="actionTestEquipment">
+   <property name="text">
+    <string>ExecuteTest</string>
+   </property>
+  </action>
+  <action name="actionTestModelMaster">
+   <property name="text">
+    <string>TestModelMaster</string>
+   </property>
+  </action>
+  <action name="actionTestMaster">
+   <property name="text">
+    <string>TestMaster</string>
+   </property>
+  </action>
+  <action name="actionUserPermisions">
+   <property name="text">
+    <string>UserPermisions</string>
+   </property>
+  </action>
+  <action name="actionAppMasterSettings">
+   <property name="text">
+    <string>AppMasterSettings</string>
+   </property>
+  </action>
+  <action name="actionCuttingList">
+   <property name="text">
+    <string>CuttingList</string>
+   </property>
+  </action>
+  <action name="actionOrders">
+   <property name="text">
+    <string>Orders</string>
+   </property>
+  </action>
+  <action name="actionC_C_LABEL">
+   <property name="text">
+    <string>C&amp;C LABEL</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
